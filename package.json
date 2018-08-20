@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "nagarjunayadavk@gmail.com",
   "license": "ISC",
@@ -14,5 +15,8 @@
     "express-fileupload": "^0.4.0",
     "fast-csv": "^2.4.1",
     "mongoose": "^5.0.6"
+  },
+  "engines": {
+    "node": "4.1.1"
   }
 }
