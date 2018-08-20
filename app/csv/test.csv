@@ -1,0 +1,9 @@
+name: String,version: String,vendor: String,installerType: String,os: String,packcageSourceName: String,path: String,filename: String,installedName: String,installedVersion: String
+,,,,,,,,,
+Microsoft .NET Framework 4.5.2 Multi-Targeting Pack,4.5.2,Microsoft,exe,Windows,oldchefshare,FrameWork.NET 4.5.2 Developer Pack\\1.0.0\\SOURCE\\NetFX452,NDP452-KB2901951-x86-x64-DevPack.exe,Microsoft .NET Framework 4.5.2 Multi-Targeting Pack,1
+Microsoft .NET Framework 4.7 SDK,4.7.02053,Microsoft,exe,Windows,oldchefshare,Framework.NET4.7,NDP47-DevPack-KB3186612-ENU.exe,Microsoft .NET Framework 4.7 SDK,3
+Microsoft Visual Studio 2010 Professional - ENU,10.0.30319,Microsoft,exe,Windows,oldchefshare,visualstudios\\VS2010_Professional\\en_visual_studio_2010_professional_x86_dvd_509727\\Setup,setup.exe,Microsoft Visual Studio 2010 Professional - ENU,90
+NUnit 2.6.4,2.6.4.14350,.NET Foundation,msi,Windows,oldchefshare,nunit,NUnit-2.6.4.msi,NUnit 2.6.4,2.6.4.14350
+IIS,,Microsoft,enableFeature,Windows,oldchefshare,,,,90909
+Collabnet Subversion Client x64,1.7.4.1,Collabnet,msi,Windows,oldchefshare,subversionclients,Subversion Client 1.7.4.1 x64.msi,Collabnet Subversion Client x64,1.7.4.1
+TortoiseSVN 1.7.6.22632 (64 bit),1.7.6.22632,Tortoise,msi,Windows,oldchefshare,subversionclients,TortoiseSVN-1.7.6.22632-x64-svn-1.7.4.msi,TortoiseSVN 1.7.6.22632 (64 bit),1.7.6.22632

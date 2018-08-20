@@ -1,2 +1,4 @@
 # fastcsv
-Upload CSV file using node js and insert records in DB.
+This is MEAN Appliaction.
+
+Upload CSV file using fastcsv npm package and insert records in DB.

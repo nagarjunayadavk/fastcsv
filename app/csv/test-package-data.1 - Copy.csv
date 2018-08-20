@@ -1,0 +1,71 @@
+name: String, version: String, vendor: String, installerType: String, os: String, osversions: [ { type: String } ], packcageSourceName: String, path: String, filename: String, extraSwitches: [ {type:String} ], customSwitches: [ {type:String} ], destinationDrive: String, destinationPath: String, installedName: String, installedVersion: String,recipe
+,,,,,,,,,,,,,,,
+Microsoft .NET Framework 4.5.2 Multi-Targeting Pack,4.5.2,Microsoft,exe,Windows,7;10;2012R2,oldchefshare,FrameWork.NET 4.5.2 Developer Pack\\1.0.0\\SOURCE\\NetFX452,NDP452-KB2901951-x86-x64-DevPack.exe,,/q /norestart /Log c:\\chef-installation-logs\\dotNET4.5.2log.txt,,,Microsoft .NET Framework 4.5.2 Multi-Targeting Pack,,"
+package 'MS .Net FW 4.5.2' do
+  package_name 'Microsoft .NET Framework 4.5.2 Multi-Targeting Pack'
+  source ""W:\\FrameWork.NET 4.5.2 Developer Pack\\1.0.0\\SOURCE\\NetFX452\\NDP452-KB2901951-x86-x64-DevPack.exe""
+  action :install
+  installer_type :custom
+  options ""/q /norestart /Log c:\\chef-installation-logs\\dotNET4.5.2log.txt""
+  timeout 15*60
+end
+"
+Microsoft .NET Framework 4.7 SDK,4.7.02053,Microsoft,exe,Windows,7;10;2012R2,oldchefshare,Framework.NET4.7,NDP47-DevPack-KB3186612-ENU.exe,,/q /norestart /Log c:\\chef-installation-logs\\dotNET4.7-log.txt,,,Microsoft .NET Framework 4.7 SDK,,"
+package 'MS .Net FW 4.7' do
+  package_name 'Microsoft .NET Framework 4.7 SDK'
+  # version '4.7.02053'
+  source ""W:\\Framework.NET4.7\\NDP47-DevPack-KB3186612-ENU.exe""
+  action :install
+  installer_type :custom
+  options ""/q /norestart /Log c:\\chef-installation-logs\\dotNET4.7-log.txt""
+  timeout 15*60
+end
+"
+Microsoft Visual Studio 2010 Professional - ENU,10.0.30319,Microsoft,exe,Windows,7;10;2012R2,oldchefshare,visualstudios\\VS2010_Professional\\en_visual_studio_2010_professional_x86_dvd_509727\\Setup,setup.exe,,/q /full /norestart /Log c:\\chef-installation-logs\\vs2010log.txt,,,Microsoft Visual Studio 2010 Professional - ENU,,"
+package 'Microsoft Visual Studio 2010' do
+  package_name 'Microsoft Visual Studio 2010 Professional - ENU'
+  # version '10.0.30319'
+  source ""W:\\visualstudios\\VS2010_Professional\\en_visual_studio_2010_professional_x86_dvd_509727\\Setup\\setup.exe""
+  action :install
+  installer_type :custom
+  # options ""/q /norestart /Log c:\\chef-installation-logs\\vs2010log.txt""
+  ## above for default install. For full install supply '/full' also:
+  options ""/q /full /norestart /Log c:\\chef-installation-logs\\vs2010log.txt""
+  timeout 60*60 # took 1000s = 17min
+end
+"
+NUnit 2.6.4,2.6.4.14350,.NET Foundation,msi,Windows,7;10;2012R2,oldchefshare,nunit,NUnit-2.6.4.msi,,,,,NUnit 2.6.4,2.6.4.14350,"
+package 'nunit 2.6.4.14350' do
+  package_name 'NUnit 2.6.4'
+  version '2.6.4.14350'
+  source ""W:\\nunit\\NUnit-2.6.4.msi""
+  # options '/S'
+  action :install
+  # installer_type :custom
+  timeout 5*60
+end
+"
+IIS,,Microsoft,enableFeature,Windows,10;2012R2,oldchefshare,,,,,,,,,"
+execute 'Enable IIS' do
+  # below doesn't work without /All - asks for some parent feature to be installed first
+  command ""DISM /Online /Enable-Feature /FeatureName:IIS-WebServer /All""
+end
+"
+Collabnet Subversion Client x64,1.7.4.1,Collabnet,msi,Windows,7;10;2012R2,oldchefshare,subversionclients,Subversion Client 1.7.4.1 x64.msi,,,,,Collabnet Subversion Client x64,1.7.4.1,"
+package 'Collabnet Subversion Client' do
+  package_name 'Collabnet Subversion Client x64'
+  version '1.7.4.1'
+  source ""W:\\subversionclients\\Subversion Client 1.7.4.1 x64.msi""
+  action :install
+  timeout 5*60
+end
+"
+TortoiseSVN 1.7.6.22632 (64 bit),1.7.6.22632,Tortoise,msi,Windows,7;10;2012R2,oldchefshare,subversionclients,TortoiseSVN-1.7.6.22632-x64-svn-1.7.4.msi,,,,,TortoiseSVN 1.7.6.22632 (64 bit),1.7.6.22632,"
+package 'TortoiseSVN' do
+  package_name 'TortoiseSVN 1.7.6.22632 (64 bit)'
+  version '1.7.22632'
+  source ""W:\\subversionclients\\TortoiseSVN-1.7.6.22632-x64-svn-1.7.4.msi""
+  action :install
+  timeout 5*60
+end
+"
